@@ -59,9 +59,34 @@ class ConnectMsSQL():
         return (sum(prices)/len(prices))
 
 
-    def total_sales_for_company(self):
-        query_rows = self.__filter_query("SELECT CompanyName, SUM(ROUND(UnitPrice*Quantity*(1-Discount),2)) FROM [Order Details] OD "
-                                         "JOIN Orders O ON OD.OrderID=O.OrderID"
-                                         "JOIN Customers C ON C.CustomerID=O.CustomerID"
-                                         "GROUP BY CompanyName")
+    # def total_sales_for_company(self):
+    #     query_rows = self.__filter_query("SELECT CompanyName, SUM(ROUND(UnitPrice*Quantity*(1-Discount),2)) FROM [Order Details] OD "
+    #                                      "JOIN Orders O ON OD.OrderID=O.OrderID"
+    #                                      "JOIN Customers C ON C.CustomerID=O.CustomerID"
+    #                                      "GROUP BY CompanyName")
 
+
+# CRUD
+
+# Create 1 entry
+    # use INSERT
+    # the cursor cannot make transactions (go to documentation)
+
+# Read all entries
+    # fetch all records and return as either list or dictionaries
+
+# Read one entry
+    # fetch specific record
+    # Intake a certain condition to search with
+    # get one value using ID
+
+# Update 1 entry
+    # find out the position (ID) of the data we'd like to update
+    # use UPDATE TABLE where that specific record exits
+    # Cursor does not make transactions (Documentation)
+
+# Destroy 1 entry
+    # destroy what?
+    # the ID of the specific record
+    
+    # destroy the record
