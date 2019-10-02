@@ -13,4 +13,5 @@ cursor_nwdb = connect_nwdb.cursor()
 
 count_row = cursor_nwdb.execute("SELECT * FROM Customers WHERE CompanyName LIKE '%z%'")
 
+# Could do a while loop with .fetchone()
 print(count_row.fetchall())
